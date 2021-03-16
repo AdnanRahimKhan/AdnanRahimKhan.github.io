@@ -1,0 +1,167 @@
+html {
+  scroll-behavior: smooth;
+}
+h1 {
+  font-size: 5rem;
+}
+section {
+  max-width: 75rem;
+}
+.navbar {
+  padding: 0.5rem;
+}
+
+.bg-grad {
+  background-color: #21d4fd;
+  background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
+}
+section.about-section {
+  background-attachment: fixed;
+  background-size: cover;
+}
+.nav-link:hover {
+  color: lightyellow;
+}
+
+section.skill-section {
+  background-color: #ff3cac;
+  background-image: linear-gradient(
+    50deg,
+    #ff3cac 0%,
+    #784ba0 50%,
+    #2886c5 100%
+  );
+  transform: skewY(-5deg);
+}
+
+section.skill-section,
+section.about-section {
+  max-width: 100%;
+}
+hr.hr-short {
+  border-width: 0.25rem;
+  width: 25%;
+}
+.portfolio-content {
+  color: white;
+}
+hr:not([size]) {
+  height: 5px;
+}
+@media (min-width: 992px) {
+  body {
+    padding-top: 0;
+    padding-left: 17rem;
+  }
+  section {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+  #sideNav {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 17rem;
+    height: 100vh;
+  }
+  #html5 {
+    background-color: #21d4fd;
+    background-image: linear-gradient(-7deg, #fad961 0%, #f76b1c 100%);
+  }
+
+  #css3 {
+    background-color: #0093e9;
+    background-image: linear-gradient(-7deg, #0093e9 0%, #80d0c7 100%);
+  }
+
+  #js {
+    background-color: #fbab7e;
+    background-image: linear-gradient(
+      -7deg,
+      #fbab7e 0%,
+      rgb(255, 252, 70) 100%
+    );
+  }
+
+  #php {
+    background-color: #4158d0;
+    background-image: linear-gradient(-7deg, #4158d0 0%, #c850c0 100%);
+  }
+
+  .skill-column {
+    transition: ease;
+    transition-duration: 1s;
+    transition-delay: 0.2s;
+  }
+
+  .skill-column:hover {
+    transform: scale(1.2);
+    box-shadow: -7px 12px 3px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+  }
+  #sideNav .navbar-brand {
+    display: flex;
+    margin: auto auto 0;
+    padding: 0.5rem;
+  }
+
+  #sideNav .navbar-collapse {
+    display: flex;
+    align-items: flex-start;
+    flex-grow: 0;
+    width: 100%;
+    margin-bottom: auto;
+  }
+
+  #sideNav .navbar-collapse .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #sideNav .navbar-collapse .navbar-nav .nav-item {
+    display: block;
+  }
+
+  #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  section {
+    min-height: 100vh;
+  }
+  #sideNav a img {
+    display: none;
+  }
+  section.about-section::before {
+    content: "";
+    background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0)
+    );
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+  }
+}
+@media (max-width: 768px) {
+  #sideNav a img {
+    display: inline-block;
+    width: 32px;
+  }
+  section.about-section .col-md-4 img {
+    display: none;
+  }
+
+  section.about-section .col-md-8 .card-body {
+    margin-top: 3rem;
+  }
+}
